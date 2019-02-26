@@ -34,7 +34,7 @@
     <CheatEntry>
       <ID>40</ID>
       <Description>"player"</Description>
-      <LastState Value="610502616" RealAddress="24347660"/>
+      <LastState Value="434300712" RealAddress="19E2E728"/>
       <VariableType>4 Bytes</VariableType>
       <Address>"Subnautica.exe"+0142B908</Address>
       <Offsets>
@@ -48,7 +48,7 @@
         <CheatEntry>
           <ID>35</ID>
           <Description>"liveMixin"</Description>
-          <LastState Value="246B9508" RealAddress="974EA180"/>
+          <LastState Value="19E2E7D8" RealAddress="19E2E7D8"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+B0</Address>
@@ -59,7 +59,7 @@
             <CheatEntry>
               <ID>36</ID>
               <Description>"health"</Description>
-              <LastState Value="80" RealAddress="974EA1D8"/>
+              <LastState Value="2.346161947E-23" RealAddress="19E2E830"/>
               <Color>000080</Color>
               <VariableType>Float</VariableType>
               <Address>+58</Address>
@@ -69,7 +69,7 @@
         <CheatEntry>
           <ID>55</ID>
           <Description>"usedTools"</Description>
-          <LastState Value="24965B70" RealAddress="DAC0C230"/>
+          <LastState Value="19E2E8B8" RealAddress="19E2E8B8"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+198</Address>
@@ -80,7 +80,7 @@
             <CheatEntry>
               <ID>56</ID>
               <Description>"count"</Description>
-              <LastState Value="0" RealAddress="DAC0C270"/>
+              <LastState Value="66260624" RealAddress="19E2E8F8"/>
               <Color>000000</Color>
               <VariableType>4 Bytes</VariableType>
               <Address>+40</Address>
@@ -88,7 +88,7 @@
             <CheatEntry>
               <ID>61</ID>
               <Description>"generation"</Description>
-              <LastState Value="0" RealAddress="DAC0C278"/>
+              <LastState Value="66260752" RealAddress="19E2E900"/>
               <Color>000000</Color>
               <VariableType>4 Bytes</VariableType>
               <Address>+48</Address>
@@ -98,7 +98,7 @@
         <CheatEntry>
           <ID>41</ID>
           <Description>"cinematicModeActive"</Description>
-          <LastState Value="0" RealAddress="243478A0"/>
+          <LastState Value="0" RealAddress="19E2E968"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>Binary</VariableType>
           <BitStart>0</BitStart>
@@ -109,7 +109,7 @@
         <CheatEntry>
           <ID>34</ID>
           <Description>"lastEscapePod"</Description>
-          <LastState Value="2500EEA0" RealAddress="DB144138"/>
+          <LastState Value="00000321" RealAddress="19F005B0"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+200</Address>
@@ -120,7 +120,6 @@
             <CheatEntry>
               <ID>32</ID>
               <Description>"introCinematic"</Description>
-              <LastState Value="24C1F008" RealAddress="970EED20"/>
               <ShowAsHex>1</ShowAsHex>
               <VariableType>4 Bytes</VariableType>
               <Address>+28</Address>
@@ -131,46 +130,31 @@
                 <CheatEntry>
                   <ID>33</ID>
                   <Description>"cinematicModeActive"</Description>
-                  <LastState Value="0" RealAddress="970EEDA6"/>
                   <VariableType>2 Bytes</VariableType>
                   <Address>+86</Address>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>6</ID>
+              <ID>62</ID>
               <Description>"startedIntroCinematic"</Description>
-              <LastState Value="1" RealAddress="DB14422C"/>
+              <LastState Value="0" RealAddress="19F006A4"/>
               <VariableType>4 Bytes</VariableType>
-              <Address>"Subnautica.exe"+0142B908</Address>
-              <Offsets>
-                <Offset>F4</Offset>
-                <Offset>28</Offset>
-                <Offset>F8</Offset>
-                <Offset>D8</Offset>
-                <Offset>190</Offset>
-              </Offsets>
+              <Address>+F4</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>2</ID>
+              <ID>63</ID>
               <Description>"version"</Description>
-              <LastState Value="4" RealAddress="DB144228"/>
+              <LastState Value="16" RealAddress="19F006A0"/>
               <VariableType>4 Bytes</VariableType>
-              <Address>"Subnautica.exe"+0142B908</Address>
-              <Offsets>
-                <Offset>F0</Offset>
-                <Offset>28</Offset>
-                <Offset>F8</Offset>
-                <Offset>D8</Offset>
-                <Offset>190</Offset>
-              </Offsets>
+              <Address>+F0</Address>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
           <ID>23</ID>
           <Description>"oxygenMgr"</Description>
-          <LastState Value="24817908" RealAddress="EC602AA0"/>
+          <LastState Value="19E2E7A8" RealAddress="19E2E7A8"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+80</Address>
@@ -181,7 +165,7 @@
             <CheatEntry>
               <ID>24</ID>
               <Description>"sources"</Description>
-              <LastState Value="24817A10" RealAddress="28CEF1C0"/>
+              <LastState Value="19E2E7B8" RealAddress="19E2E7B8"/>
               <ShowAsHex>1</ShowAsHex>
               <VariableType>4 Bytes</VariableType>
               <Address>+18</Address>
@@ -192,7 +176,7 @@
                 <CheatEntry>
                   <ID>25</ID>
                   <Description>"items"</Description>
-                  <LastState Value="24817C50" RealAddress="EC437320"/>
+                  <LastState Value="19E2E7C8" RealAddress="19E2E7C8"/>
                   <ShowAsHex>1</ShowAsHex>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+10</Address>
@@ -203,7 +187,7 @@
                     <CheatEntry>
                       <ID>26</ID>
                       <Description>"player"</Description>
-                      <LastState Value="24817848" RealAddress="979779D8"/>
+                      <LastState Value="19E2E7E8" RealAddress="19E2E7E8"/>
                       <ShowAsHex>1</ShowAsHex>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+20</Address>
@@ -214,7 +198,7 @@
                         <CheatEntry>
                           <ID>28</ID>
                           <Description>"available"</Description>
-                          <LastState Value="45" RealAddress="979779F8"/>
+                          <LastState Value="2.346156898E-23" RealAddress="19E2E808"/>
                           <Color>068000</Color>
                           <VariableType>Float</VariableType>
                           <Address>+20</Address>
@@ -222,7 +206,7 @@
                         <CheatEntry>
                           <ID>27</ID>
                           <Description>"capacity"</Description>
-                          <LastState Value="45" RealAddress="979779F0"/>
+                          <LastState Value="2.346154374E-23" RealAddress="19E2E800"/>
                           <Color>47CA00</Color>
                           <VariableType>Float</VariableType>
                           <Address>+18</Address>
@@ -232,6 +216,7 @@
                     <CheatEntry>
                       <ID>29</ID>
                       <Description>"tank"</Description>
+                      <LastState Value="19E2E7E8" RealAddress="19E2E7E8"/>
                       <ShowAsHex>1</ShowAsHex>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+28</Address>
@@ -242,6 +227,7 @@
                         <CheatEntry>
                           <ID>31</ID>
                           <Description>"available"</Description>
+                          <LastState Value="2.346156898E-23" RealAddress="19E2E808"/>
                           <Color>068000</Color>
                           <VariableType>Float</VariableType>
                           <Address>+20</Address>
@@ -249,6 +235,7 @@
                         <CheatEntry>
                           <ID>30</ID>
                           <Description>"capacity"</Description>
+                          <LastState Value="2.346154374E-23" RealAddress="19E2E800"/>
                           <Color>47CA00</Color>
                           <VariableType>Float</VariableType>
                           <Address>+18</Address>
@@ -266,7 +253,7 @@
     <CheatEntry>
       <ID>9</ID>
       <Description>"notinmenu"</Description>
-      <LastState Value="BF" RealAddress="156DF1E3"/>
+      <LastState Value="00" RealAddress="159A31E3"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>Byte</VariableType>
       <Address>"Subnautica.exe"+0142B8C8</Address>
@@ -281,7 +268,7 @@
     <CheatEntry>
       <ID>0</ID>
       <Description>"time"</Description>
-      <LastState Value="190.3158722" RealAddress="156DF1A4"/>
+      <LastState Value="5.186655521" RealAddress="159A31A4"/>
       <VariableType>Float</VariableType>
       <Address>"Subnautica.exe"+0142B8C8</Address>
       <Offsets>
@@ -295,7 +282,6 @@
     <CheatEntry>
       <ID>42</ID>
       <Description>"daynightcycle"</Description>
-      <LastState Value="610506464" RealAddress="DB2595A0"/>
       <VariableType>4 Bytes</VariableType>
       <Address>"Subnautica.exe"+0142B5E8</Address>
       <Offsets>
@@ -309,7 +295,6 @@
         <CheatEntry>
           <ID>11</ID>
           <Description>"timePassedAsDouble"</Description>
-          <LastState Value="641.883167879656" RealAddress="DB259600"/>
           <Color>000000</Color>
           <VariableType>Double</VariableType>
           <Address>+60</Address>
@@ -368,7 +353,7 @@
     <CheatEntry>
       <ID>58</ID>
       <Description>"No description"</Description>
-      <LastState Value="00000000" RealAddress="28BBFDB8"/>
+      <LastState Value="83965E3B" RealAddress="28BBFDB8"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
       <Address>28BBFDB8</Address>
@@ -376,7 +361,7 @@
     <CheatEntry>
       <ID>59</ID>
       <Description>"No description"</Description>
-      <LastState Value="3F800000" RealAddress="A572EB48"/>
+      <LastState Value="A58E2C78" RealAddress="A572EB48"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
       <Address>A572EB48</Address>
@@ -384,7 +369,7 @@
     <CheatEntry>
       <ID>60</ID>
       <Description>"No description"</Description>
-      <LastState Value="9FD76F00" RealAddress="28BBFDA0"/>
+      <LastState Value="B9B76DA9" RealAddress="28BBFDA0"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
       <Address>28BBFDA0</Address>
