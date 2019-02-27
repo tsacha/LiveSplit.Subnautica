@@ -15,7 +15,6 @@ state("Subnautica") {
 
 startup {
     vars.runStarted = false;
-    vars.previousTimePassed = 1000.0;
 }
 update {
     if(current.notInMenu) {
