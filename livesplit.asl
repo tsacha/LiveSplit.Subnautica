@@ -2,36 +2,42 @@ state("Subnautica") {
     // 0 in menu, >0 in game
     bool notInMenu :  0x0142B8C8, 0x180, 0x40, 0xB8, 0xB8, 0x333;
 
-    // 1 during cinematic
-    bool cinematicModeActive : 0x0142B908, 0x190, 0x150, 0xD0, 0x18, 0x240;
-
-    // 1 when cinematic has started
-    bool startedIntroCinematic : 0x0142B908, 0x190, 0x150, 0xD0, 0x18, 0x200, 0xF4;
-
-    // When starting the game : 0 in creative, 1 in survival/hardcore
-    bool usedToolsGeneration : 0x0142B908, 0x190, 0x150, 0xD0, 0x18, 0x198, 0x48;
-
     // When starting rocket
     bool launchRocket : 0x0142B900, 0x30, 0xF8, 0x8, 0x230, 0x3C0, 0x18, 0x20, 0x7D8, 0x10, 0x20, 0x1B4;
+
+    // Time passed
+    double timePassed : 0x0142B5E8, 0x50, 0x2E0, 0x98, 0x1D0, 0x60;
+    float unityTimePassed : 0x0142B8C8, 0x180, 0x40, 0xB8, 0xB8, 0x2F4;
+
+    // Paused
+    bool isPaused : "fmodstudio.dll", 0x003047C0, 0x350, 0xF0, 0xC0, 0x678, 0xC4;
 }
 
 startup {
     vars.runStarted = false;
+    vars.previousTimePassed = 1000.0;
 }
 update {
     if(current.notInMenu) {
-        // Survival / Hardcore
-        if(!current.cinematicModeActive && current.startedIntroCinematic && !current.usedToolsGeneration) {
-            vars.runStarted = true;
+        if(!vars.runStarted) {
+            if(current.timePassed > 480.02) {
+                vars.runStarted = true;
+            }
+            vars.offsetTime = current.unityTimePassed + 480.0 -  Math.Max(480.0, current.timePassed);
         }
-        // Creative
-        if(!current.startedIntroCinematic && !current.cinematicModeActive && current.usedToolsGeneration) {
-            vars.runStarted = true;
-        }
+
     }
     else {
         vars.runStarted = false;
     }
+}
+gameTime {
+    if (vars.runStarted) {
+        return TimeSpan.FromSeconds(current.unityTimePassed-vars.offsetTime);
+    }
+}
+isLoading {
+    return current.isPaused;
 }
 start {
     if (vars.runStarted) return true;
@@ -40,6 +46,7 @@ split {
     if (vars.runStarted) {
         if (current.launchRocket) {
             return true;
+            vars.runStarted = false;
         }
     }
 }
