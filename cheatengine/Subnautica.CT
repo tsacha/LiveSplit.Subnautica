@@ -4,7 +4,6 @@
     <CheatEntry>
       <ID>37</ID>
       <Description>"survival"</Description>
-      <LastState Value="2467CCE8" RealAddress="A3419BD0"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
       <Address>"Subnautica.exe"+0142B908</Address>
@@ -19,7 +18,6 @@
         <CheatEntry>
           <ID>39</ID>
           <Description>"water"</Description>
-          <LastState Value="80.49996948" RealAddress="A3419C30"/>
           <Color>FF8000</Color>
           <VariableType>Float</VariableType>
           <Address>+60</Address>
@@ -27,7 +25,6 @@
         <CheatEntry>
           <ID>38</ID>
           <Description>"food"</Description>
-          <LastState Value="43.3571701" RealAddress="A3419C2C"/>
           <Color>00458A</Color>
           <VariableType>Float</VariableType>
           <Address>+5c</Address>
@@ -37,21 +34,18 @@
     <CheatEntry>
       <ID>40</ID>
       <Description>"player"</Description>
-      <LastState Value="603323800" RealAddress="24F69990"/>
+      <LastState Value="246567C8" RealAddress="43C6A330"/>
+      <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
-      <Address>"Subnautica.exe"+0142B908</Address>
+      <Address>14F21D88</Address>
       <Offsets>
         <Offset>0</Offset>
-        <Offset>18</Offset>
-        <Offset>D0</Offset>
-        <Offset>150</Offset>
-        <Offset>190</Offset>
       </Offsets>
       <CheatEntries>
         <CheatEntry>
           <ID>35</ID>
           <Description>"liveMixin"</Description>
-          <LastState Value="2467BDF0" RealAddress="A3DBF100"/>
+          <LastState Value="247A6050" RealAddress="C021AA80"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+B0</Address>
@@ -62,7 +56,7 @@
             <CheatEntry>
               <ID>36</ID>
               <Description>"health"</Description>
-              <LastState Value="80" RealAddress="A3DBF158"/>
+              <LastState Value="80" RealAddress="C021AAD8"/>
               <Color>000080</Color>
               <VariableType>Float</VariableType>
               <Address>+58</Address>
@@ -72,7 +66,7 @@
         <CheatEntry>
           <ID>55</ID>
           <Description>"usedTools"</Description>
-          <LastState Value="24790AC0" RealAddress="BF490A50"/>
+          <LastState Value="2479CCA8" RealAddress="C1068FA0"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+198</Address>
@@ -83,7 +77,7 @@
             <CheatEntry>
               <ID>56</ID>
               <Description>"count"</Description>
-              <LastState Value="0" RealAddress="BF490A90"/>
+              <LastState Value="1" RealAddress="C1068FE0"/>
               <Color>000000</Color>
               <VariableType>4 Bytes</VariableType>
               <Address>+40</Address>
@@ -91,7 +85,7 @@
             <CheatEntry>
               <ID>61</ID>
               <Description>"generation"</Description>
-              <LastState Value="0" RealAddress="BF490A98"/>
+              <LastState Value="1" RealAddress="C1068FE8"/>
               <Color>000000</Color>
               <VariableType>4 Bytes</VariableType>
               <Address>+48</Address>
@@ -101,7 +95,7 @@
         <CheatEntry>
           <ID>41</ID>
           <Description>"cinematicModeActive"</Description>
-          <LastState Value="0" RealAddress="24F69BD0"/>
+          <LastState Value="0" RealAddress="43C6A570"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>Binary</VariableType>
           <BitStart>0</BitStart>
@@ -112,7 +106,6 @@
         <CheatEntry>
           <ID>34</ID>
           <Description>"lastEscapePod"</Description>
-          <LastState Value="24E6A710" RealAddress="56E55000"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+200</Address>
@@ -123,7 +116,6 @@
             <CheatEntry>
               <ID>32</ID>
               <Description>"introCinematic"</Description>
-              <LastState Value="24687740" RealAddress="3D3E49A0"/>
               <ShowAsHex>1</ShowAsHex>
               <VariableType>4 Bytes</VariableType>
               <Address>+28</Address>
@@ -134,7 +126,6 @@
                 <CheatEntry>
                   <ID>33</ID>
                   <Description>"cinematicModeActive"</Description>
-                  <LastState Value="0" RealAddress="3D3E4A26"/>
                   <VariableType>2 Bytes</VariableType>
                   <Address>+86</Address>
                 </CheatEntry>
@@ -143,14 +134,12 @@
             <CheatEntry>
               <ID>62</ID>
               <Description>"startedIntroCinematic"</Description>
-              <LastState Value="0" RealAddress="56E550F4"/>
               <VariableType>4 Bytes</VariableType>
               <Address>+F4</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>63</ID>
               <Description>"version"</Description>
-              <LastState Value="4" RealAddress="56E550F0"/>
               <VariableType>4 Bytes</VariableType>
               <Address>+F0</Address>
             </CheatEntry>
@@ -159,7 +148,7 @@
         <CheatEntry>
           <ID>23</ID>
           <Description>"oxygenMgr"</Description>
-          <LastState Value="2434F8E8" RealAddress="BFC988C0"/>
+          <LastState Value="24795660" RealAddress="D59C0D20"/>
           <ShowAsHex>1</ShowAsHex>
           <VariableType>4 Bytes</VariableType>
           <Address>+80</Address>
@@ -170,7 +159,7 @@
             <CheatEntry>
               <ID>24</ID>
               <Description>"sources"</Description>
-              <LastState Value="2434F9F0" RealAddress="A3243040"/>
+              <LastState Value="24795768" RealAddress="98EED0A0"/>
               <ShowAsHex>1</ShowAsHex>
               <VariableType>4 Bytes</VariableType>
               <Address>+18</Address>
@@ -181,7 +170,7 @@
                 <CheatEntry>
                   <ID>25</ID>
                   <Description>"items"</Description>
-                  <LastState Value="2434FC30" RealAddress="BFCA2F50"/>
+                  <LastState Value="247959A8" RealAddress="D58D9F00"/>
                   <ShowAsHex>1</ShowAsHex>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+10</Address>
@@ -192,7 +181,6 @@
                     <CheatEntry>
                       <ID>26</ID>
                       <Description>"player"</Description>
-                      <LastState Value="2434F828" RealAddress="56F19438"/>
                       <ShowAsHex>1</ShowAsHex>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+20</Address>
@@ -203,7 +191,6 @@
                         <CheatEntry>
                           <ID>28</ID>
                           <Description>"available"</Description>
-                          <LastState Value="45" RealAddress="56F19458"/>
                           <Color>068000</Color>
                           <VariableType>Float</VariableType>
                           <Address>+20</Address>
@@ -211,7 +198,6 @@
                         <CheatEntry>
                           <ID>27</ID>
                           <Description>"capacity"</Description>
-                          <LastState Value="45" RealAddress="56F19450"/>
                           <Color>47CA00</Color>
                           <VariableType>Float</VariableType>
                           <Address>+18</Address>
@@ -255,7 +241,7 @@
     <CheatEntry>
       <ID>9</ID>
       <Description>"notinmenu"</Description>
-      <LastState Value="C3" RealAddress="155621E3"/>
+      <LastState Value="00" RealAddress="159141E3"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>Byte</VariableType>
       <Address>"Subnautica.exe"+0142B8C8</Address>
@@ -270,7 +256,7 @@
     <CheatEntry>
       <ID>0</ID>
       <Description>"time"</Description>
-      <LastState Value="179.3952484" RealAddress="155621A4"/>
+      <LastState Value="5.558702469" RealAddress="159141A4"/>
       <VariableType>Float</VariableType>
       <Address>"Subnautica.exe"+0142B8C8</Address>
       <Offsets>
@@ -286,7 +272,7 @@
       <Description>"launchRocket"</Description>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
-      <Address>593C8D0</Address>
+      <Address>5C7C8D0</Address>
       <Offsets>
         <Offset>0</Offset>
         <Offset>20</Offset>
@@ -313,7 +299,7 @@
     <CheatEntry>
       <ID>66</ID>
       <Description>"paused"</Description>
-      <LastState Value="0" RealAddress="232A909C"/>
+      <LastState Value="0" RealAddress="232D15CC"/>
       <VariableType>4 Bytes</VariableType>
       <Address>"fmodstudio.dll"+003047C0</Address>
       <Offsets>
@@ -327,10 +313,10 @@
     <CheatEntry>
       <ID>69</ID>
       <Description>"daynightcycle"</Description>
-      <LastState Value="228ACCF8" RealAddress="BF7AB500"/>
+      <LastState Value="246576D0" RealAddress="D45B2DC0"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
-      <Address>592ED80</Address>
+      <Address>5C6ED80</Address>
       <Offsets>
         <Offset>0</Offset>
       </Offsets>
@@ -338,7 +324,7 @@
         <CheatEntry>
           <ID>11</ID>
           <Description>"timePassedAsDouble"</Description>
-          <LastState Value="656.244170313701" RealAddress="BF7AB560"/>
+          <LastState Value="2077.57560179103" RealAddress="D45B2E20"/>
           <Color>000000</Color>
           <VariableType>Double</VariableType>
           <Address>+60</Address>
@@ -452,8 +438,8 @@
     </Structure>
     <Structure Name="LaunchRocket.Static" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
       <Elements>
-        <Element Offset="0" Vartype="Byte" Bytesize="1" Description="launchStarted" DisplayMethod="Unsigned Integer"/>
         <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="OffsetOfInstanceIDInCPlusPlusObject" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="0" Vartype="Byte" Bytesize="1" Description="launchStarted" DisplayMethod="Unsigned Integer"/>
       </Elements>
     </Structure>
     <Structure Name="NotificationManager" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
@@ -505,8 +491,8 @@
     </Structure>
     <Structure Name="NotificationManager.Static" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
       <Elements>
-        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="OffsetOfInstanceIDInCPlusPlusObject" DisplayMethod="Unsigned Integer"/>
         <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="notificationColor" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="OffsetOfInstanceIDInCPlusPlusObject" DisplayMethod="Unsigned Integer"/>
         <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_main" DisplayMethod="Unsigned Integer"/>
       </Elements>
     </Structure>
@@ -969,8 +955,8 @@
     </Structure>
     <Structure Name="Player.Static" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
       <Elements>
-        <Element Offset="0" Vartype="Pointer" Bytesize="8" Description="creativeEquipment" DisplayMethod="Unsigned Integer"/>
         <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="OffsetOfInstanceIDInCPlusPlusObject" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="0" Vartype="Pointer" Bytesize="8" Description="creativeEquipment" DisplayMethod="Unsigned Integer"/>
         <Element Offset="8" Vartype="Pointer" Bytesize="8" Description="main" DisplayMethod="Unsigned Integer"/>
         <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="mainObject" DisplayMethod="Unsigned Integer"/>
         <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="mainCollider" DisplayMethod="Unsigned Integer"/>
@@ -1000,8 +986,8 @@
     </Structure>
     <Structure Name="uGUI_MainMenu.Static" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
       <Elements>
-        <Element Offset="0" Vartype="Pointer" Bytesize="8" Description="main" DisplayMethod="Unsigned Integer"/>
         <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="OffsetOfInstanceIDInCPlusPlusObject" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="0" Vartype="Pointer" Bytesize="8" Description="main" DisplayMethod="Unsigned Integer"/>
       </Elements>
     </Structure>
     <Structure Name="DayNightCycle" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
@@ -1029,8 +1015,8 @@
     </Structure>
     <Structure Name="DayNightCycle.Static" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
       <Elements>
-        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="OffsetOfInstanceIDInCPlusPlusObject" DisplayMethod="Unsigned Integer"/>
         <Element Offset="0" Vartype="Pointer" Bytesize="8" Description="main" DisplayMethod="Unsigned Integer"/>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" Description="OffsetOfInstanceIDInCPlusPlusObject" DisplayMethod="Unsigned Integer"/>
         <Element Offset="8" Vartype="4 Bytes" Bytesize="4" Description="dateOrigin" DisplayMethod="Unsigned Integer"/>
         <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="dayOrigin" DisplayMethod="Unsigned Integer"/>
       </Elements>
@@ -1087,6 +1073,22 @@ if aobscan ~= nil then
      mrGamemode = addressList.createMemoryRecord()
   end
   mrGamemode.setDescription('gamemode')
+end
+
+--- Finding Player
+local aobscan = AOBScan("36 03 00 00 4C 8B 2C 25 ?? ?? ?? ?? 49 8B CD 33 D2")
+if aobscan ~= nil then
+  local player = string.format("%X", readInteger(aobscan[0].."+8"))
+
+  local mrPlayer = addressList.getMemoryRecordByDescription('player')
+  if mrPlayer == nil then
+     mrPlayer = addressList.createMemoryRecord()
+  end
+  mrPlayer.setDescription('player')
+  mrPlayer.setAddress(player)
+  mrPlayer.setOffsetCount(1)
+  mrPlayer.setOffset(0, 0x0)
+  mrPlayer.ShowAsHex = true
 end
 </LuaScript>
 </CheatTable>

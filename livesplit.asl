@@ -8,12 +8,6 @@ state("Subnautica") {
     // Paused
     bool isPaused : "fmodstudio.dll", 0x003047C0, 0x350, 0xF0, 0xC0, 0x678, 0xC4;
 
-    // cinematicModeActive
-    byte cinematicModeActive : 0x0142B908, 0x190, 0x150, 0xD0, 0x18, 0x200, 0x28, 0x86;
-
-    // startedIntroCinematic
-    byte startedIntroCinematic : 0x0142B908, 0x190, 0x150, 0xD0, 0x18, 0x200, 0xF4;
-
 }
 init {
     // https://raw.githubusercontent.com/Voxelse/ASLScripts/master/Livesplit.GRIS/Livesplit.GRIS.asl
@@ -29,6 +23,7 @@ init {
     vars.baseDayNightPtr = new IntPtr();
     vars.baseRktPtr = new IntPtr();
     vars.baseGameModePtr = new IntPtr();
+    vars.basePlayerPtr = new IntPtr();
 
     foreach (var page in game.MemoryPages()) {
         var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
@@ -59,6 +54,16 @@ init {
             break;
         }
     }
+
+    foreach (var page in game.MemoryPages()) {
+        var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
+
+        IntPtr ptr = scanner.Scan(new SigScanTarget(0x8, "36 03 00 00 4C 8B 2C 25 ?? ?? ?? ?? 49 8B CD 33 D2"));
+        if (ptr != IntPtr.Zero) {
+            vars.basePlayerPtr = new IntPtr(game.ReadValue<int>(ptr));
+            break;
+        }
+    }    
 }
 startup {
     vars.runStarted = false;
@@ -71,13 +76,19 @@ update {
     vars.gameMode = game.ReadValue<byte>((IntPtr)vars.baseGameModePtr);
 
     if(current.notInMenu) {
+        var cinematicActivePtr = vars.ReadPointers(game, vars.basePlayerPtr, new int[] {0x0});
+        vars.cinematicActive = game.ReadValue<int>((IntPtr)cinematicActivePtr+0x240);
+
+        var cinematicStartedPtr = vars.ReadPointers(game, vars.basePlayerPtr, new int[] {0x0, 0x200});
+        vars.cinematicStarted = game.ReadValue<int>((IntPtr)cinematicStartedPtr+0xF4);
+
         if(!vars.runStarted) {
             // Creative
             if(current.unityTimePassed > 0.0 && vars.gameMode == 0xFE) {
                 vars.runStarted = true;
                 vars.offsetTime = 0.0;
             }
-            if(current.unityTimePassed > 0.0 && vars.gameMode != 0xFE && current.cinematicModeActive == 0 && current.startedIntroCinematic == 1) {
+            if(current.unityTimePassed > 0.0 && vars.gameMode != 0xFE && vars.cinematicActive == 0 && vars.cinematicStarted == 1) {
                 vars.runStarted = true;
                 vars.offsetTime = current.unityTimePassed + 480.0 -  Math.Max(480.0, vars.dayNight);
             }
