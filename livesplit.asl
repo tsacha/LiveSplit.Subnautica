@@ -20,66 +20,62 @@ init {
 		return rPtr;
 	});
 
-    vars.baseDayNightPtr = new IntPtr();
-    vars.baseRktPtr = new IntPtr();
-    vars.baseGameModePtr = new IntPtr();
-    vars.basePlayerPtr = new IntPtr();
-
-    foreach (var page in game.MemoryPages()) {
-        var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
-
-        IntPtr ptr = scanner.Scan(new SigScanTarget(0x10, "00 00 00 00 55 48 8B EC 48 83 EC 10 48 8B 0C 25 ?? ?? ?? ?? 48"));
-        if (ptr != IntPtr.Zero) {
-            vars.baseRktPtr = new IntPtr(game.ReadValue<int>(ptr));
-            break;
+    vars.initPointers = (Func<Dictionary<string, IntPtr>>)(() => {
+        var signatures = new Dictionary<string, SigScanTarget> {
+        {
+                "rocket", new SigScanTarget(0x10, "00 00 00 00 55 48 8B EC 48 83 EC 10 48 8B 0C 25 ?? ?? ?? ?? 48")
+            },
+            {
+                "dayNight", new SigScanTarget(0x8, "F3 0F 5A C0 48 8B 04 25 ?? ?? ?? ?? 48")
+            },
+            {
+                "gameMode", new SigScanTarget(0x9, "56 48 83 EC 08 48 8B F1 BA ?? ?? ?? ?? 48 63 12")
+            },
+            {
+                "player", new SigScanTarget(0x8, "36 03 00 00 4C 8B 2C 25 ?? ?? ?? ?? 49 8B CD 33 D2")
+            }        
+        };
+        var pointers = new Dictionary<string, IntPtr>();
+        var nbPointers = 0;
+        foreach (var page in game.MemoryPages()) {
+            var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
+            foreach(var k in signatures.Keys) {
+                if (!pointers.ContainsKey(k)) {
+                    IntPtr ptr = scanner.Scan(signatures[k]);
+                    if (ptr != IntPtr.Zero) {
+                        pointers[k] = new IntPtr(game.ReadValue<int>(ptr));
+                        nbPointers++;
+                    }
+                }
+            }
+            if (nbPointers == signatures.Count) {
+                break;
+            }
         }
-    }
-
-    foreach (var page in game.MemoryPages()) {
-        var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
-
-        IntPtr ptr = scanner.Scan(new SigScanTarget(0x8, "F3 0F 5A C0 48 8B 04 25 ?? ?? ?? ?? 48"));
-        if (ptr != IntPtr.Zero) {
-            vars.baseDayNightPtr = new IntPtr(game.ReadValue<int>(ptr));
-            break;
+        // Retry the same function if we don't have enough pointers, the aggressive way
+        if (nbPointers < signatures.Count) {
+            pointers = vars.initPointers();
         }
-    }
+        return pointers;
+    });
 
-    foreach (var page in game.MemoryPages()) {
-        var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
+    vars.pointers = vars.initPointers();
 
-        IntPtr ptr = scanner.Scan(new SigScanTarget(0x9, "56 48 83 EC 08 48 8B F1 BA ?? ?? ?? ?? 48 63 12"));
-        if (ptr != IntPtr.Zero) {
-            vars.baseGameModePtr = new IntPtr(game.ReadValue<int>(ptr));
-            break;
-        }
-    }
-
-    foreach (var page in game.MemoryPages()) {
-        var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
-
-        IntPtr ptr = scanner.Scan(new SigScanTarget(0x8, "36 03 00 00 4C 8B 2C 25 ?? ?? ?? ?? 49 8B CD 33 D2"));
-        if (ptr != IntPtr.Zero) {
-            vars.basePlayerPtr = new IntPtr(game.ReadValue<int>(ptr));
-            break;
-        }
-    }    
 }
 startup {
     vars.runStarted = false;
-    vars.rktRdy = 0.0;
     vars.previousTime = 0.0;
 }
 update {
-    var dayNightPtr = vars.ReadPointers(game, vars.baseDayNightPtr, new int[] {0x0});
+    var dayNightPtr = vars.ReadPointers(game, vars.pointers["dayNight"], new int[] {0x0});
     vars.dayNight = game.ReadValue<double>((IntPtr)dayNightPtr+0x60);
-    vars.gameMode = game.ReadValue<byte>((IntPtr)vars.baseGameModePtr);
+    vars.gameMode = game.ReadValue<byte>((IntPtr)vars.pointers["gameMode"]);
 
     if(current.notInMenu) {
-        var cinematicActivePtr = vars.ReadPointers(game, vars.basePlayerPtr, new int[] {0x0});
+        var cinematicActivePtr = vars.ReadPointers(game, vars.pointers["player"], new int[] {0x0});
         vars.cinematicActive = game.ReadValue<int>((IntPtr)cinematicActivePtr+0x240);
 
-        var cinematicStartedPtr = vars.ReadPointers(game, vars.basePlayerPtr, new int[] {0x0, 0x200});
+        var cinematicStartedPtr = vars.ReadPointers(game, vars.pointers["player"], new int[] {0x0, 0x200});
         vars.cinematicStarted = game.ReadValue<int>((IntPtr)cinematicStartedPtr+0xF4);
 
         if(!vars.runStarted) {
@@ -94,7 +90,7 @@ update {
             }
         }
         else {
-            var rktPtr = vars.ReadPointers(game, vars.baseRktPtr, new int[] {0x0, 0x18, 0x20, 0x7D8, 0x10, 0x20});
+            var rktPtr = vars.ReadPointers(game, vars.pointers["rocket"], new int[] {0x0, 0x18, 0x20, 0x7D8, 0x10, 0x20});
             vars.rktRdy = game.ReadValue<float>((IntPtr)rktPtr+0x1B4);
         }
 
